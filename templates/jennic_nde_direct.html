@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jennic-NDE-Direct</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h3>UOA_UPLOAD_JENNIC={{ j_name }},{{crc_name}},{{length_name}}</h3>
+    <h3>UOA_NDE_PUSH_JENNIC_DIRECT:{{ node_mac }}={{ j_name }},{{crc_name}}</h3>
+    <h3>UOA_NDE_INSTALL_JENNIC:{{ node_mac }}={{ j_name }},{{crc_name}}</h3>
+    <br>
+    <h3>~~~~~~~~ Other Commands ~~~~~~~~</h3>
+    <h3>NDE_SW_UPDATE:{{ node_mac }}=1</h3>
+    <h3>UOA_NDE_REPORT:{{ node_mac }}</h3>
+    <h3>UOA_NDE_DELETE_IMAGE:{{ node_mac }}</h3>
+    <br>
+    <a href="{{ url_for('home') }}"> Go to Home Page</a>
+
+</body>
+</html>

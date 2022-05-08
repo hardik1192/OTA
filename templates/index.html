@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hardik</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Radio+Canada:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<!--    <div class="box">-->
+<!--    <h1>Login</h1>-->
+<!--    {% with messages = get_flashed_messages() %}-->
+<!--      {% if messages %}-->
+<!--        {% for message in messages %}-->
+<!--         <p>{{ message }}</p>-->
+<!--        {% endfor %}-->
+<!--      {% endif %}-->
+<!--    {% endwith %}-->
+<!--    </div>-->
+  <h1 class="header"> OTA Commands for NWK and NDE Upgrade </h1>
+   {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+         <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  <div class="box-nwk">
+
+<!--      Jennic upgrade for Network-->
+    <form action="/jennic" method="post">
+      <div class="jennic-c">
+        <h2>For NWK(Jennic) Upgrade</h2>
+        <label class="for-size">Choose Jennic version:</label>
+        <select name="jen-ver" id="jen-ver" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="70.0">70.0</option>
+          <option value="73.5">73.5</option>
+          <option value="74.4">74.4</option>
+          <option value="75.2">75.2</option>
+          <option value="76.0">76.0</option>
+        </select>
+        <br>
+        <label class="for-size">Choose Jennic chip type:</label>
+        <select name="jen-chip" id="jen-chip" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="5148">5148</option>
+          <option value="5168">5168</option>
+        </select>
+        <button type="submit" class="for-size-dropdown">Submit</button>
+      </div>
+    </form>
+      <!--      EFM upgrade for Network  -->
+    <form action="/efm" method="post">
+      <div class="efm-c">
+        <h2>For NWK(EFM) Upgrade</h2>
+        <label class="for-size">Choose EFM version:</label>
+        <select name="ef-ver" id="ef-ver" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="28.0">28.0</option>
+          <option value="31.5">31.5</option>
+          <option value="32.4">32.4</option>
+          <option value="33.2">33.2</option>
+          <option value="34.0">34.0</option>
+        </select>
+        <br>
+        <label class="for-size">Choose EFM chip type:</label>
+        <select name="efm-chip" id="efm-chip" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="G">G</option>
+          <option value="G-128">G-128</option>
+          <option value="L">L</option>
+        </select>
+        <button type="submit" class="for-size-dropdown">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="box-nde">
+<!--      Jennic upgrade for Node-->
+    <form action="/jennic-NDE" method="post">
+      <div class="jennic-c">
+        <h2>For NDE(Jennic) Upgrade</h2>
+        <label class="for-size">Please Enter the Node MAC: </label>
+        <input type="text" placeholder="MAC Address" name="mac" class="for-size-mac">
+        <br>
+        <label class="for-size">Choose Jennic version:</label>
+        <select name="jen-ver" id="jen-ver-nde" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="70.0">70.0</option>
+          <option value="73.5">73.5</option>
+          <option value="74.4">74.4</option>
+          <option value="75.2">75.2</option>
+          <option value="76.0">76.0</option>
+        </select>
+        <br>
+        <label class="for-size">Choose Jennic chip type:</label>
+        <select name="jen-chip" id="jen-chip-nde" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="5168">5168</option>
+          <option value="5148">5148</option>
+        </select>
+        <button type="submit" class="for-size-dropdown">Submit</button>
+      </div>
+    </form>
+<!--      EFM upgrade for Node-->
+    <form action="/efm-nde" method="post">
+      <div class="efm-c">
+        <h2>For NDE(EFM) Upgrade</h2>
+        <label class="for-size">Please Enter the Node MAC: </label>
+        <input type="text" placeholder="MAC Address" name="mac" class="for-size-mac">
+        <br>
+        <label class="for-size">Choose EFM version:</label>
+        <select name="ef-ver" id="ef-ver-nde" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="28.0">28.0</option>
+          <option value="31.5">31.5</option>
+          <option value="32.4">32.4</option>
+          <option value="33.2">33.2</option>
+          <option value="34.0">34.0</option>
+        </select>
+        <br>
+        <label class="for-size">Choose EFM chip type:</label>
+        <select name="efm-chip" id="efm-chip-nde" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="G">G</option>
+          <option value="G-128">G-128</option>
+          <option value="L">L</option>
+        </select>
+        <button type="submit" class="for-size-dropdown">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="box-nde-direct">
+<!--      Jennic Direct upgrade-->
+    <form action="/jennic-NDE-direct" method="post">
+      <div class="jennic-c">
+        <h2>For NDE(Jennic) Direct Upgrade</h2>
+        <label class="for-size">Please Enter the Node MAC: </label>
+        <input type="text" placeholder="MAC Address" name="mac" class="for-size-mac">
+        <br>
+        <label class="for-size">Choose Jennic version:</label>
+        <select name="jen-ver" id="jen-ver-nde-direct" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="70.0">70.0</option>
+          <option value="73.5">73.5</option>
+          <option value="74.4">74.4</option>
+          <option value="75.2">75.2</option>
+          <option value="76.0">76.0</option>
+        </select>
+        <br>
+        <label class="for-size">Choose Jennic chip type:</label>
+        <select name="jen-chip" id="jen-chip-nde-direct" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="5168">5168</option>
+          <option value="5148">5148</option>
+        </select>
+        <button type="submit" class="for-size-dropdown">Submit</button>
+      </div>
+    </form>
+<!--    EFM Direct Upgrade-->
+    <form action="/efm-nde-direct" method="post">
+      <div class="efm-c">
+        <h2>For NDE(EFM) Direct Upgrade</h2>
+        <label class="for-size">Please Enter the Node MAC: </label>
+        <input type="text" placeholder="MAC Address" name="mac" class="for-size-mac">
+        <br>
+        <label class="for-size">Choose EFM version:</label>
+        <select name="ef-ver" id="ef-ver-nde-direct" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="28.0">28.0</option>
+          <option value="31.5">31.5</option>
+          <option value="32.4">32.4</option>
+          <option value="33.2">33.2</option>
+          <option value="34.0">34.0</option>
+        </select>
+        <br>
+        <label class="for-size">Choose EFM chip type:</label>
+        <select name="efm-chip" id="efm-chip-nde-direct" class="please-select">
+          <option value="Nothing">Please Select</option>
+          <option value="G">G</option>
+          <option value="G-128">G-128</option>
+          <option value="L">L</option>
+        </select>
+        <button type="submit" class="for-size-dropdown">Submit</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

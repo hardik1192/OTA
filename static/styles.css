@@ -1,0 +1,84 @@
+.header {
+        text-align: center;
+        font-family: "Radio+Canada",sans-serif;
+    }
+    p {
+        text-align: center;
+        color: red;
+        font-family: "Radio+Canada",sans-serif;
+        font-size: 20px;
+    }
+     .jennic-c {
+        text-align: left;
+        margin-top: 20px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        width: 502px;
+        padding-bottom: 7px;
+        padding-top: 5px;
+        padding-left: 7px;
+        background-color: #B7CADB;
+    }
+     .efm-c {
+        text-align: left;
+        margin-top: 20px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        width: 502px;
+        padding-bottom: 7px;
+        padding-top: 5px;
+        padding-left: 7px;
+        background-color: #B7CADB;
+    }
+    .for-size{
+        font-size: 20px;
+    }
+    .for-size-dropdown{
+        font-size: 18px;
+        background-color: #03045E;
+        color: white;
+    }
+    a{
+        font-size: 25px;
+        color: blue;
+        text-decoration: underline;
+    }
+    button:hover{
+        background-color: #398AB9;
+    }
+    select:hover{
+        background-color: #EEF2FF;
+    }
+    h2{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    body{
+        background-color: #DFDFDE;
+    }
+    h2 {
+        text-decoration: underline;
+        font-family: "Radio+Canada",sans-serif;
+    }
+    h3{
+        font-family: "Poppins" ,sans-serif;
+    }
+    label {
+        margin-bottom: 10px;
+        line-height: 40px;
+        font-family: "Montserrat+Alternates",sans-serif;
+    }
+    .for-size-mac{
+        font-size: 20px;
+    }
+    .box-nwk, .box-nde, .box-nde-direct{
+        display: flex;
+        flex-flow: row wrap;
+        margin-right: 20px;
+        justify-content: space-around;
+    }
+    .please-select {
+        font-size: 18px;
+        background-color: #DFDFDE;
+    }
+
